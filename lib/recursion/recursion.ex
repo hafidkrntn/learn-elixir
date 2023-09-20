@@ -8,8 +8,9 @@ defmodule Recursion do
   end
 
   def loop([]), do: nil
+
   def loop([head | tail]) do
-    #Do something with head
+    # Do something with head
     IO.puts(head)
     loop(tail)
   end
@@ -32,7 +33,6 @@ defmodule Recursion do
   def equipment_count([]), do: 0
   def equipment_count([_head | tail]), do: 1 + equipment_count(tail)
 
-
   @doc """
   Returns a formatted list.
 
@@ -49,6 +49,7 @@ defmodule Recursion do
 
   """
   def format_equipment_list([]), do: []
+
   def format_equipment_list([head | tail]) do
     [head |> format_string() | format_equipment_list(tail)]
   end
@@ -126,9 +127,10 @@ defmodule Recursion do
 
   """
   def partial_occurrence([], _value), do: []
+
   def partial_occurrence([head | tail], value) do
     if String.contains?(format_string(head), format_string(value)) do
-       [format_string(head) | partial_occurrence(tail, value)]
+      [format_string(head) | partial_occurrence(tail, value)]
     else
       partial_occurrence(tail, value)
     end
@@ -137,5 +139,4 @@ defmodule Recursion do
   defp format_string(value) do
     value |> String.downcase() |> String.replace(" ", "_")
   end
-
 end

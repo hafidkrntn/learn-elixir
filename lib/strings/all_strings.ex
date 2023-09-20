@@ -14,6 +14,7 @@ defmodule Allstrings do
 
   def initials(full_name) do
     list = String.split(full_name)
+
     Enum.map(list, fn name ->
       initial(name)
     end)

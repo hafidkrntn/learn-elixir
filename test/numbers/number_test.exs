@@ -5,5 +5,4 @@ defmodule BasicMathTest do
   test "add 2 + 3 = 5" do
     assert BasicMath.add(2, 3) == 5
   end
-
 end

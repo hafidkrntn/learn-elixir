@@ -1,5 +1,4 @@
 defmodule BasicMath do
-
   def add(param1, param2), do: param1 + param2
 
   def substract(param1, param2) do

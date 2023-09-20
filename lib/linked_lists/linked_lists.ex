@@ -26,8 +26,8 @@ defmodule LinkedLists do
     ["Buku", "Pensil", "Spidol", "Penghapus"]
   end
 
-    @spec get_first_lists(nonempty_maybe_improper_list) :: any
-    @doc """
+  @spec get_first_lists(nonempty_maybe_improper_list) :: any
+  @doc """
   Returns a list of equipment names.
 
   This function returns a list of equipment names including "Buku", "Pensil",
@@ -42,7 +42,8 @@ defmodule LinkedLists do
   def get_first_lists(list) do
     hd(list)
   end
-    @doc """
+
+  @doc """
   Returns a list of equipment names.
 
   This function returns a list of equipment names including "Buku", "Pensil",
@@ -58,7 +59,7 @@ defmodule LinkedLists do
     tl(list)
   end
 
-    @doc """
+  @doc """
   Returns a list of equipment names.
 
   This function returns a list of equipment names including "Buku", "Pensil",
@@ -74,7 +75,7 @@ defmodule LinkedLists do
     list ++ [value]
   end
 
-    @doc """
+  @doc """
   Returns a list of equipment names.
 
   This function returns a list of equipment names including "Buku", "Pensil",
@@ -123,7 +124,7 @@ defmodule LinkedLists do
     length(list)
   end
 
-   @doc """
+  @doc """
   Returns a list of equipment names.
 
   This function returns a list of equipment names including "Buku", "Pensil",
@@ -138,6 +139,6 @@ defmodule LinkedLists do
   def check_for_item(list, item) do
     item = String.downcase(item)
     list = Enum.map(list, &String.downcase/1)
-    Enum.member?(list,item)
+    Enum.member?(list, item)
   end
 end
